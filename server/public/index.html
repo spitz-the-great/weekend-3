@@ -26,6 +26,25 @@
             <input type="submit" value="submit">
         </form>
 
+        <table class="task-table">
+                <thead>
+                    <tr>
+                        <th>Task Detail</th>
+                        <th>Status</th>
+                        <th>Mark Task Complete</th>
+                        <th>Delete Task</th>
+                    </tr>
+                </thead>
+                <tbody id="task-output">
+                    <tr ng-repeat="task in vm.listArray">
+                        <td>{{task.task}}</td>
+                        <td>{{task.status}}</td>
+                        
+                        <td><button ng-click="vm.completeTask(task._id)">Complete</button></td>
+                        <td><button ng-click="vm.deleteTask(task._id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
 
 
     </div>

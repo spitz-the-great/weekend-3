@@ -22,6 +22,19 @@ myApp.controller('listController', function ($http) {
         }).catch(function (error) {
             alert('unable to post new task');
         })
+        getTaskList();
+    }
+
+    function getTaskList() {
+        console.log('got task from db');
+        $http({
+            method: 'GET',
+            url: '/todo'
+        }).then(function(response) {
+            vm.listArray = response.data; 
+        }).catch(function(error) {
+            alert('unable to get car repairs');
+        })
     }
 
 

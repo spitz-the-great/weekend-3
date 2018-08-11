@@ -20,19 +20,24 @@ router.post('/', (req, res) => {
     console.log('/todo POST');
     console.log(req.body);
     let taskFromClient = req.body;
-    // Add to the database
-    // validating we match the schema
     const taskToAdd = new todo(taskFromClient); 
-    // Puts the data into the database
     taskToAdd.save().then(() => {
         console.log('task added', taskToAdd);
-        res.sendStatus(201); // All OK
+        res.sendStatus(201); 
     }).catch((error) => {
         console.log(error);
-        res.sendStatus(500); // Send back an error to client
+        res.sendStatus(500); 
     });
-    //carRepairs.push(repairFromClient);
-    // delivary confirmation
+    
 });
+
+router.get('/', (req, res) => {
+    console.log('/todo GET hit');
+    todo.find({}).then( (tasksFromDB) => {
+        res.send(tasksFromDB);
+    }).catch( (error) => {
+        res.sendStatus(500);  
+    });
+}) 
 
 module.exports = router;
