@@ -1,7 +1,6 @@
 const myApp = angular.module('myApp', []);
 
 myApp.controller('listController', function ($http) {
-    console.log('angular js');
 
     const vm = this;
     vm.listArray = [];
@@ -18,7 +17,6 @@ myApp.controller('listController', function ($http) {
             url: '/todo',
             data: taskIn
         }).then(function (response) {
-            // getCarRepairs();
         }).catch(function (error) {
             alert('unable to post new task');
         })
@@ -30,10 +28,19 @@ myApp.controller('listController', function ($http) {
         $http({
             method: 'GET',
             url: '/todo'
-        }).then(function(response) {
-            vm.listArray = response.data; 
-        }).catch(function(error) {
+        }).then(function (response) {
+            vm.listArray = response.data;
+        }).catch(function (error) {
             alert('unable to get car repairs');
+        })
+    }
+
+    vm.completeTask = function (taskId) {
+        $http({
+            method: 'PUT',
+            url: '/todo/taskComplete/' + taskId
+        }).then(function (response) {
+            getTaskList();
         })
     }
 

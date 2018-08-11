@@ -38,7 +38,7 @@
                 <tbody id="task-output">
                     <tr ng-repeat="task in vm.listArray">
                         <td>{{task.task}}</td>
-                        <td>{{task.status}}</td>
+                        <td>{{task.completeStatus}}</td>
                         
                         <td><button ng-click="vm.completeTask(task._id)">Complete</button></td>
                         <td><button ng-click="vm.deleteTask(task._id)">Delete</button></td>

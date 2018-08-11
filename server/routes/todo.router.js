@@ -40,4 +40,22 @@ router.get('/', (req, res) => {
     });
 }) 
 
+
+router.put('/taskComplete/:id', (req, res) => {
+    console.log('marking complete', req.params.id);
+
+    todo.findOne({_id: req.params.id}).then((tasksFromDB) => {
+        console.log(tasksFromDB);
+        tasksFromDB.completeStatus = true;
+        tasksFromDB.save().then((response) => {
+            res.sendStatus(200);
+        }).catch((error) => {
+            res.sendStatus(500);
+        })
+    }).catch((error) => {
+        res.sendStatus(500);
+        console.log('error', error);
+    })
+});
+
 module.exports = router;
