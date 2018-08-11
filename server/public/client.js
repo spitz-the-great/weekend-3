@@ -44,5 +44,13 @@ myApp.controller('listController', function ($http) {
         })
     }
 
+    vm.deleteTask = function( taskId ){
+        $http({
+            method: 'DELETE',
+            url: '/todo/deleteTask/' + taskId
+        }).then( function( response ){
+            getTaskList();
+        })
+    };
 
 });
