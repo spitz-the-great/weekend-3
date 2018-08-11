@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true})); // jQuery
 
 // uses
 app.use( express.static( 'server/public' ) );
-app.use('/todo', todoRouter)
+app.use('/todo', todoRouter);
 
 // globals
 // if process.env.PORT is undefined, use 5000
