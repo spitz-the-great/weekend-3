@@ -1,12 +1,12 @@
-# weekend-3
+# MEAN Stack To-Do List
 
-Built With -
+##Built With -
 
 angular js
 express/node
 mongoDB
 
-Installing -
+## Installing -
 
 1. download/clone repo 
 2. in terinal: npm install - might need to install all the things to be safe: express mongoose body-parser
@@ -14,7 +14,7 @@ Installing -
 4. behold the majesty of my css skills
 
 
-Completed Features -
+## Completed Features -
 
 Post, update existing, and delete records from a database.
 DOM updates in real time with each action, it even turns some things green!
