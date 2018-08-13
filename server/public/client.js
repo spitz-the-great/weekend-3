@@ -31,7 +31,7 @@ myApp.controller('listController', function ($http) {
         }).then(function (response) {
             vm.listArray = response.data;
         }).catch(function (error) {
-            alert('unable to get car repairs');
+            alert('unable to get task');
         })
     }
 
