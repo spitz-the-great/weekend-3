@@ -6,16 +6,16 @@ angular js, express/node, mongoDB
 
 ## Installing -
 
-1. download/clone repo 
-2. in terinal: npm install - might need to install all the things to be safe: express mongoose body-parser
-3. in terminal: npm start - to spin up server
-4. behold the majesty of my css skills
+1. Download/clone the git repo.
+2. In terminal: `npm install` - might need to install all the things to be safe: `express mongoose body-parser`
+3. In terminal: `npm start` - to spin up server
+4. Behold the majesty of my CSS skills!
 
 
 ## Completed Features -
 
 Post, update existing, and delete records from a database.
-DOM updates in real time with each action, it even turns some things green!
+The DOM updates in real time with each action, it even turns some things green!
 
 Next Steps -
 1. make it look like more of a polished turd than a raw html turd
