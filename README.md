@@ -1,10 +1,8 @@
 # MEAN Stack To-Do List
 
-##Built With -
+## Built With -
 
-angular js
-express/node
-mongoDB
+angular js, express/node, mongoDB
 
 ## Installing -
 
@@ -19,5 +17,5 @@ mongoDB
 Post, update existing, and delete records from a database.
 DOM updates in real time with each action, it even turns some things green!
 
-Next Steps - 
+Next Steps -
 1. make it look like more of a polished turd than a raw html turd
