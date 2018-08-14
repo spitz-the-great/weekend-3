@@ -20,7 +20,9 @@ const port = process.env.PORT || 5002;
 // Connect to Mongo using Mongoose
 const mongoose = require('mongoose');
 // Where is Mongo?
-const mongoURI = 'mongodb://localhost:27017/todo';
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/todo';
+
+ // ^NEED TO UPDATE TO: process.env.MONGODB_URI || 'mongodb://localhost:27017/todo'
 // 27017 is the PORT that Mongo is running on
 // repairs is what we are naming the database
 
